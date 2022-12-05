@@ -19,11 +19,11 @@ class DummyCrupier:
         raise MethodCalled()
 
 
-def test_order_state_changed_invoiced(monkeypatch: pytest.MonkeyPatch):
+def test_order_state_changed_invoiced():
     core.crupier_class = DummyCrupier
 
     try:
-        core.order_state_changed(VTEX, 1, 1, 20, "test")
+        core.order_state_changed(VTEX, 1, 1, 20, "invoiced")
     except MethodCalled:
         ...
     else:

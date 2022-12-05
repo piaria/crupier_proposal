@@ -38,3 +38,10 @@ class Integration(ABC):
     def set_shipping_policies():
         """sincroniza las shipping_policies en la tienda"""
         ...
+
+
+    def install_integration():
+        ...
+
+    def uninstall_integration():
+        ...    

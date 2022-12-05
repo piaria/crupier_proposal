@@ -22,6 +22,7 @@ class VtexIntegration(Integration):
         client_id: int, store_id: int, order_id: int, new_state: str
     ):
         ...
+    
 
     def save_store(client_id: int, store_id: int):
         """guarda el store en la integracion"""
