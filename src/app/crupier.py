@@ -7,7 +7,9 @@ from app.core.models import Core_Order
 class Crupier:
     core_class = Core
     integration_classes: Dict[str, str] = {
-        "vtex": "app.vtex.vtex.VtexIntegration"
+        "vtex": "app.vtex.vtex.VtexIntegration",
+        "meli": "app.vtex.vtex.MeliIntegration",
+        "magento": "app.vtex.vtex.MagentoIntegration",
     }
 
     def handle_core_order_state_changed(

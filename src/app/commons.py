@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Dict
+from typing import Dict, List
 
 
 class Integration(ABC):
@@ -24,24 +24,20 @@ class Integration(ABC):
         self.set_pickup_points()
         self.set_shipping_policies()
 
+    def deactivate_store():
+        ...
+
     @abstractmethod
     def save_store(client_id: int, store_id: int):
         """guarda el store en la integracion"""
         ...
 
     @abstractmethod
-    def set_pickup_points():
+    def set_pickup_points(pickup_points: List):
         """sincroniza los pickup_points en la tienda"""
         ...
 
     @abstractmethod
-    def set_shipping_policies():
+    def set_shipping_policies(shipping_policies: List):
         """sincroniza las shipping_policies en la tienda"""
         ...
-
-
-    def install_integration():
-        ...
-
-    def uninstall_integration():
-        ...    
